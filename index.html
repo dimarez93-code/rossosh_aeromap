@@ -1,16 +1,26 @@
 <!doctype html>
 <html lang="en">
 <style>
-    /* Принудительно показываем контрол слоев на мобильных */
+    /* 1. Растягиваем карту на весь экран */
+    html, body {
+        height: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #map {
+        height: 100vh !important;
+        width: 100vw !important;
+    }
+
+    /* 2. Возвращаем кнопку слоев на экран */
+    .leaflet-top.leaflet-right {
+        top: 10px !important;
+        right: 10px !important;
+    }
     .leaflet-control-layers {
         display: block !important;
         visibility: visible !important;
-        z-index: 10000 !important;
-    }
-    /* Если кнопка уехала за край, пробуем сдвинуть её */
-    .leaflet-top.leaflet-right {
-        right: 0px !important;
-        top: 10px !important;
     }
 </style>
     <head>
