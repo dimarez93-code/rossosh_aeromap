@@ -1,5 +1,18 @@
 <!doctype html>
 <html lang="en">
+<style>
+    /* Принудительно показываем контрол слоев на мобильных */
+    .leaflet-control-layers {
+        display: block !important;
+        visibility: visible !important;
+        z-index: 10000 !important;
+    }
+    /* Если кнопка уехала за край, пробуем сдвинуть её */
+    .leaflet-top.leaflet-right {
+        right: 0px !important;
+        top: 10px !important;
+    }
+</style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
